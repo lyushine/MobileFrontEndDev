@@ -39,3 +39,8 @@ music.stop();   //暂停
 
 然后在适当的地方   music.play();  播放。
 </pre>
+##-webkit-transform:rotate(xxx deg) 失效
+
+当在某一个页面的其中一个元素中使用-webkit-transform:translate3d属性时，在其页面中的其他元素中使用-webkit-transform:rotate(xxx deg) 会失效，比如你要设置一个元素的旋转角度都会失效
+
+解决：在失效元素父级上添加：-webkit-transform:translate3d(0,0,0)
